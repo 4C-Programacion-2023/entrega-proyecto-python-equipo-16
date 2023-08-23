@@ -1,4 +1,4 @@
-def mostrar_menu():
+def mostrar_menu():   #selección de juego
     print("Hola, ¿qué quieres jugar?:")
     print("1. Piedra, papel o tijera")
     print("2. Buscaminas")
@@ -14,13 +14,13 @@ while True:
     mostrar_menu()
     opcion = input("Ingresa el número del juego (o '0' para salir): ")
 
-    while opcion not in ['0', '1', '2', "3", "4", "5", "6", "7", "8", "9"]:
+    while opcion not in ['0', '1', '2', "3", "4", "5", "6", "7", "8", "9"]:   #posibilidades de juegos
         print("Ese juego no existe, ingrese uno que si lo haga.")
         opcion = input("Ingresa el número del juego (o '0' para salir): ")
 
     if opcion == "0":
         break
-
+#juegos
     if opcion == "1":
         import piedra_papel_tijera
 
@@ -50,6 +50,6 @@ while True:
     elif opcion == "9":
         import preguntas_y_respuestas  # Importar sin ejecutar el módulo
 
-    jugar_otro = input("¿Deseas jugar otro juego? Ingresa 's' para sí, o cualquier otra tecla para salir: ")
+    jugar_otro = input("¿Deseas jugar otro juego? Ingresa 's' para sí, o cualquier otra tecla para salir: ")   #volver a jugar
     if jugar_otro.lower() != "s":
         break
