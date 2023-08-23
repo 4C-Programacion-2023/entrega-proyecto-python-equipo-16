@@ -2,7 +2,7 @@ import random
 
 def jugar_piedra_papel_tijera():
     while True:
-        a = int(input("Elija 1 de estos 3 elementos: 1 = Piedra, 2 = Papel, 3 = Tijera: "))
+        a = int(input("Elija 1 de estos 3 elementos: 1 = Piedra, 2 = Papel, 3 = Tijera: "))   #te dá a elegir un elemento para jugar
 
         if a < 1 or a > 3:
             print("Valor no existente, elija uno que si exista.")
@@ -12,7 +12,7 @@ def jugar_piedra_papel_tijera():
         print(b)
 
         if a == 1 and b == 3:
-            print("¡Ganaste! Piedra le gana a tijera")
+            print("¡Ganaste! Piedra le gana a tijera")   #distintas combinaciones y sus resultados
         elif a == 1 and b == 2:
             print("¡Perdiste! Piedra no le gana a papel")
         elif a == 1 and b == 1:
@@ -31,7 +31,7 @@ def jugar_piedra_papel_tijera():
             print("¡Empate!")
 
         while True:
-            opcion = input("¿quiere jugar de nuevo? Ingresa 1 para volver a jugar, o 2 para salir: ")
+            opcion = input("¿quiere jugar de nuevo? Ingresa 1 para volver a jugar, o 2 para salir: ")   #volver a jugar
             if opcion not in ['1', '2']:
                 print("valor no existente. Elija uno que si exista.")
             else:
