@@ -1,6 +1,6 @@
 import random
 
-def mostrar_tablero(tablero):
+def mostrar_tablero(tablero):   #tablero
     for fila in tablero:
         print(" | ".join(fila))
         print("---------")
@@ -11,7 +11,7 @@ def verificar_ganador(tablero, jugador):
             return True
 
     for columna in range(3):
-        if tablero[0][columna] == tablero[1][columna] == tablero[2][columna] == jugador:
+        if tablero[0][columna] == tablero[1][columna] == tablero[2][columna] == jugador:   #ubicaciones
             return True
 
     if tablero[0][0] == tablero[1][1] == tablero[2][2] == jugador:
@@ -51,7 +51,7 @@ def jugar_tres_en_linea_bot():
                 fila, columna = obtener_entrada_usuario()
             else:
                 print("Turno del bot:")
-                fila = random.randint(0, 2)
+                fila = random.randint(0, 2)   #donde se ubica el bot
                 columna = random.randint(0, 2)
                 print("El bot eligió la fila", fila, "y la columna", columna)
 
@@ -62,9 +62,9 @@ def jugar_tres_en_linea_bot():
                     if jugador_actual == "X":
                         print("Ganaste")
                     else:
-                        print("Cómo te va a ganar un bot? ¡Jaja!")
+                        print("Cómo te va a ganar un bot? ¡Jaja!")   #saber quién ganó
                     juego_terminado = True
-                elif all(all(casilla != " " for casilla in fila) for fila in tablero):
+                elif all(all(casilla != " " for casilla in fila) for fila in tablero):   #posibilidad de ubicarse
                     mostrar_tablero(tablero)
                     print("Empataste con un bot, ¡jaja!")
                     juego_terminado = True
@@ -73,7 +73,7 @@ def jugar_tres_en_linea_bot():
             else:
                 print("Esa casilla ya está ocupada. Intenta de nuevo.")
 
-        opcion = input("¿Deseas jugar de nuevo? Ingresa 1 para volver a jugar o 2 para salir: ")
+        opcion = input("¿Deseas jugar de nuevo? Ingresa 1 para volver a jugar o 2 para salir: ")   #volver a jugar
         if opcion == "2":
             print("Gracias por jugar. ¡Hasta luego!")
             break
