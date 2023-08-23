@@ -1,5 +1,5 @@
 import random
-
+#lo de abajo son los dibujos del ahorcado, los cuáles irán "avanzando" a medida que le errés a las letras
 AHORCADO = ['''
       +---+
       |   |
@@ -44,13 +44,13 @@ AHORCADO = ['''
      / \  |
     =========''']
 palabras = 'valoracion aprender python comida juego web imposible variable fue muy complicado escribir esto curso volador cabeza reproductor mirada le pedimos a chatgpt hacer los dibujos escritor billete lapicero celular revista gratuito disco voleibol anillo estrella hola me llamo nicolas ferreyra ojala estés leyendo esto'.split()
-
+#las palabras de arriba son las palabras a usar en el juego
 def buscarPalabraAleat(listaPalabras):
     palabrarandom = random.randint(0, len(listaPalabras) - 1)
-    return listaPalabras[palabrarandom]
+    return listaPalabras[palabrarandom]   #se elegirá una palabra random de la lista
 
 def displayBoard(AHORCADO, letraIncorrecta, letraCorrecta, palabraSecreta):
-    print(AHORCADO[len(letraIncorrecta)]) #len lee lo q ingresaste, su longitud, caracteres, etcetc
+    print(AHORCADO[len(letraIncorrecta)]) #se lee lo q ingresaste, su longitud, caracteres, etcetc
     print("")
     fin = " "
     print('Letras incorrectas:', fin)
