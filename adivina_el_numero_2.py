@@ -1,11 +1,11 @@
-import random
+import random 
 
 def jugar_adivina_el_numero_2():
-    while True:
+    while True:   
         numero_secreto = random.randint(1, 1000)
-        intentos = 0
+        intentos = 0   #los intentos se setean en 0 
 
-        print("¡Bienvenido al juego de adivinanzas!")
+        print("¡Bienvenido al juego de adivinanzas!")   #bienvenida
         print("Estoy pensando en un número del 1 al 1000. Adivina, tenes 15 intentos")
 
         while intentos < 15:   #mientras hayas hecho menos de 15 intentos, no perdiste
@@ -15,7 +15,7 @@ def jugar_adivina_el_numero_2():
                 print("Escribi bien bobi.")
                 continue #si se ingresa un valor inválido, en vez de terminar la simulación, se continúa
 
-            intentos += 1
+            intentos += 1   #por cada intento, te vás quedando con menos
 
             if intento < numero_secreto:
                 print("El número secreto es mayor.")
@@ -23,11 +23,11 @@ def jugar_adivina_el_numero_2():
                 print("El número secreto es menor.")
             else:
                 print(f"Muy bien. Adivinaste el numero {numero_secreto} en {intentos} intentos")
-                break
+                break   #termina el juego
         else:
             print(f"Agotaste tus 15 intentos. El número secreto era {numero_secreto}. ¡ALTO BOT!")
 
-        jugar_nuevamente = input("¿Quieres jugar de nuevo? (s/n): ")
+        jugar_nuevamente = input("¿Quieres jugar de nuevo? (s/n): ")   #se pregunta si se quiere volver a jugar
         if jugar_nuevamente.lower() != 's':
             print("nos vemos bro")
-            break
+            break   #si no se quiere volver a jugar, se corta el programa
