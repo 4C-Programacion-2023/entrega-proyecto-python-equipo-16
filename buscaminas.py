@@ -1,6 +1,6 @@
 import random
 
-def tableroide(filas, columnas, num_minas):
+def tableroide(filas, columnas, num_minas):   #define las partes del mapa
     tablero = [[' ' for _ in range(columnas)] for _ in range(filas)]
     minas_colocadas = 0
 
@@ -18,7 +18,7 @@ def mostrar_tablero(tablero):
     filas = len(tablero)
     columnas = len(tablero[0])
 
-    print('    ' + '   '.join(str(i) for i in range(columnas)))
+    print('    ' + '   '.join(str(i) for i in range(columnas)))   #forma del mapa
     print('  +' + '____' * columnas + '+')
 
     for i in range(filas):
@@ -38,7 +38,7 @@ def minas_cerca(tablero, fila, columna):
 
     return contador
 
-def ver_casilla(tablero, tablero_visible, fila, columna):
+def ver_casilla(tablero, tablero_visible, fila, columna):   #se revela la casilla
     filas = len(tablero)
     columnas = len(tablero[0])
 
@@ -56,7 +56,7 @@ def ver_casilla(tablero, tablero_visible, fila, columna):
             for j in range(max(0, columna - 1), min(columna + 2, columnas)):
                 ver_casilla(tablero, tablero_visible, i, j)
 
-def jugar_buscaminas():
+def jugar_buscaminas():   #cantidad de filas, columnas, y minas
     filas = 5
     columnas = 5
     num_minas = 7
@@ -66,7 +66,7 @@ def jugar_buscaminas():
 
     juego_terminado = False
 
-    while not juego_terminado:
+    while not juego_terminado:   #ingresar fila y columna
         mostrar_tablero(tablero_visible)
         fila = None
         columna = None
@@ -99,7 +99,7 @@ def jugar_buscaminas():
                 print('ganaste')
                 juego_terminado = True
 
-    opcion = input('¿querés jugar de nuevo? Ingrese 1 para volver a jugar, o 0 para salir: ')
+    opcion = input('¿querés jugar de nuevo? Ingrese 1 para volver a jugar, o 0 para salir: ')   #se pregunta si se quiere volver a jugar
 
     if opcion == '1':
         jugar_buscaminas()
